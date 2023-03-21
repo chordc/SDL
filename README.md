@@ -23,7 +23,7 @@ Finally, we will initially test our **SDL** on well-known physical models that h
 
 - We will gradually put in the repository.
 
-- We recommend using the following Python package: [numpy](https://numpy.org/), [scipy](https://scipy.org/), [sklearn](https://scikit-learn.org/stable/index.html), [pandas](https://pandas.pydata.org/), [tensorflow](https://www.tensorflow.org/?hl=zh-cn) and [jax](https://github.com/google/jax).
+- We recommend using the following Python packages: [numpy](https://numpy.org/), [scipy](https://scipy.org/), [sklearn](https://scikit-learn.org/stable/index.html), [pandas](https://pandas.pydata.org/), [tensorflow](https://www.tensorflow.org/?hl=zh-cn) and [jax](https://github.com/google/jax).
 
 ## Maintainers
 @chordc.
