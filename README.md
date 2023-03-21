@@ -1,6 +1,6 @@
 # Exploring Symbolic Deep Learning
 
-**SDL** is a course project of [《Machine learning for physicists》](https://github.com/wangleiphy/ml4p). The goal of this project is to explore the effectiveness of combining traditional **symbolic models** with **convolutional neural networks**.  
+**SDL** is a course project of [《Machine learning for physicists》](https://github.com/wangleiphy/ml4p). The goal of this project is to explore the effectiveness of combining traditional **symbolic models** with **graph neural networks**.  
 
 The content includes sharing literature reading and some code demos, which we will gradually put in the repository.  
 
