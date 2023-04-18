@@ -79,7 +79,7 @@ class ACModel(nn.Module):
         x = self.actor(hx)
         #dist = Categorical(logits=F.log_softmax(x, dim=1))
         #res=x+self.logTemperature
-        #res=self.output_dense(hx)+self.logTemperature
+        res=x+self.logTemperature
         #res = self.output_activation(res)
         #res=F.log_softmax(x, dim=1)
         res=x
