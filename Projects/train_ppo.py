@@ -1,7 +1,7 @@
 # Internal imports
 from physo.physym import batch as Batch
-from physo.learn import learnppo as learn
-from physo.learn import acmodel
+import learnppo as learn
+import acmodel
 
 
 def train_ppo(X, y, run_config, candidate_wrapper = None, stop_reward = 1., stop_after_n_epochs = 1):
