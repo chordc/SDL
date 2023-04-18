@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 import time
-from physo.learn import ppo
+import ppo
 # Internal imports
 def learner_ppo ( model,
              n_epochs,
