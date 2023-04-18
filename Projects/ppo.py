@@ -130,6 +130,8 @@ class PPO():
 
             #sample
             logit=outlogit+logprior
+            logit= torch.where(torch.isnan(logit), torch.full_like(logit, 0), logit)
+            logit= torch.where(torch.isinf(logit), torch.full_like(logit, 0), logit)
             action=torch.multinomial(torch.exp(logit),num_samples=1)[:,0]
 
             #log_prob=dist.log_prob(action)
@@ -235,6 +237,8 @@ class PPO():
 
             #sample
             logit=new_res+logprior
+            logit= torch.where(torch.isnan(logit), torch.full_like(logit, 0), logit)
+            logit= torch.where(torch.isinf(logit), torch.full_like(logit, 0), logit)
             new_logits_trains.append(logit)
             new_values_trains.append(new_value)
             #new_log_probs.append(new_log_prob)
