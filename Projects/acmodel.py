@@ -81,7 +81,8 @@ class ACModel(nn.Module):
         #res=x+self.logTemperature
         #res=self.output_dense(hx)+self.logTemperature
         #res = self.output_activation(res)
-        res=F.log_softmax(x, dim=1)
+        #res=F.log_softmax(x, dim=1)
+        res=x
 
         # Probabilities from random number generator
         if self.is_lobotomized:
