@@ -2,6 +2,8 @@ import torch
 import numpy as np
 import time
 import ppo
+from physo.learn import monitoring
+from physo.task  import benchmark
 # Internal imports
 def learner_ppo ( model,
              n_epochs,
