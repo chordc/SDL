@@ -74,18 +74,18 @@ class ACModel(nn.Module):
 
         x = self.actor(hx)
         #dist = Categorical(logits=F.log_softmax(x, dim=1))
-        dist=x+self.logTemperature
-        dist = self.output_activation(dist)
+        res=x+self.logTemperature
+        res = self.output_activation(res)
 
         # Probabilities from random number generator
         if self.is_lobotomized:
-            dist = torch.log(torch.rand(dist.shape))
+            res= torch.log(torch.rand(res.shape))
 
         x = self.critic(hx)
         value = x.squeeze(1)
         
         out_states = torch.stack(new_states)
-        return dist, value, out_states
+        return res,value, out_states
     
     def count_parameters (self):
         model_parameters = filter(lambda p: p.requires_grad, self.parameters())
