@@ -49,9 +49,9 @@ class ACModel(nn.Module):
             nn.Linear(64, 1)
         )
 
-        if output_dense is None:
-            output_dense=torch.nn.Linear(self.hidden_size,self.output_size)
-        self.output_dense=output_dense
+        #if output_dense is None:
+            #output_dense=torch.nn.Linear(self.hidden_size,self.output_size)
+        #self.output_dense=output_dense
         self.output_activation = lambda x: -torch.nn.functional.relu(x) # Mapping output to log(p)
                                  #lambda x: torch.nn.functional.softmax(x, dim=1)
                                  #torch.sigmoid
