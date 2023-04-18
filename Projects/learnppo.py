@@ -97,8 +97,8 @@ def learner_ppo ( model,
         else:
             ppo1.optimizer.zero_grad()
             loss_val  .backward()
-            grad_norm = sum(p.grad.data.norm(2).item() ** 2 for p in ppo1.acmodel.parameters()) ** 0.5
-            torch.nn.utils.clip_grad_norm_(ppo1.acmodel.parameters(), ppo1.max_grad_norm)
+            #grad_norm = sum(p.grad.data.norm(2).item() ** 2 for p in ppo1.acmodel.parameters()) ** 0.5
+            #torch.nn.utils.clip_grad_norm_(ppo1.acmodel.parameters(), ppo1.max_grad_norm)
             ppo1.optimizer .step()
 
         # -------------------------------------------------
