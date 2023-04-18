@@ -38,14 +38,14 @@ class ACModel(nn.Module):
         # Define actor's model
         self.actor = nn.Sequential(
             nn.Linear(self.hidden_size, 64),
-            F.relu(),
+            nn.ReLU(),
             nn.Linear(64, self.output_size)
         )
 
         # Define critic's model
         self.critic = nn.Sequential(
             nn.Linear(self.hidden_size, 64),
-            F.relu(),
+            nn.ReLU(),
             nn.Linear(64, 1)
         )
 
