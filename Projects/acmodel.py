@@ -38,14 +38,14 @@ class ACModel(nn.Module):
         # Define actor's model
         self.actor = nn.Sequential(
             nn.Linear(self.hidden_size, 64),
-            nn.Tanh(),
+            nn.relu(),
             nn.Linear(64, self.output_size)
         )
 
         # Define critic's model
         self.critic = nn.Sequential(
             nn.Linear(self.hidden_size, 64),
-            nn.Tanh(),
+            nn.relu(),
             nn.Linear(64, 1)
         )
 
@@ -78,8 +78,10 @@ class ACModel(nn.Module):
 
         x = self.actor(hx)
         #dist = Categorical(logits=F.log_softmax(x, dim=1))
-        res=x+self.logTemperature
-        res = self.output_activation(res)
+        #res=x+self.logTemperature
+        #res=self.output_dense(hx)+self.logTemperature
+        #res = self.output_activation(res)
+        res=F.log_softmax(x, dim=1)
 
         # Probabilities from random number generator
         if self.is_lobotomized:
