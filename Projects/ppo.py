@@ -316,7 +316,7 @@ class PPO():
         # Sum over sequence dim, mean over batch dim
 
         #ratio=torch.exp(next_log_probs-log_probs)
-        ratio=torch.exp(next_neglogp-neglogp)
+        ratio=torch.exp(-next_neglogp+neglogp)
         self.ratio=ratio
         self.advantages_train=advantages_train
         surr1=ratio*advantages_train
