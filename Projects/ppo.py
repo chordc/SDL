@@ -339,7 +339,7 @@ class PPO():
         value_loss=torch.sum(value_loss*mask_length,dim=0).mean()
 
         #loss=policy_loss+value_loss*self.value_loss_coef-entropy*self.entropy_coef
-        loss=-policy_loss-value_loss*self.value_loss_coef+entropy*self.entropy_coef
+        loss=policy_loss+value_loss*self.value_loss_coef-entropy*self.entropy_coef
         mean_loss=loss.mean()
         return mean_loss
 
