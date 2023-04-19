@@ -25,11 +25,11 @@ Finally, we will initially test our **SDL** on well-known physical models that h
 
 ### Using a hybrid optimization algorithms
 **e.g.RNN & risk-policy gradient: Using a big model to search the space of small model**     
-[Brenden K. Petersen](https://arxiv.org/abs/1912.04871)
-**e.g.RNN &GP: Using a big model to search the space of small model**     
-[T. Nathan Mundhenk et al.](https://arxiv.org/abs/2111.00053)
-**e.g.RNN & units constrains: Using a big model to search the space of small model**    
-[Tenachi et al 2023](https://arxiv.org/abs/2303.03192)
+-[Brenden K. Petersen](https://arxiv.org/abs/1912.04871)
+**e.g.RNN &GP: Using a big model to search the space of small model**        
+-[T. Nathan Mundhenk et al.](https://arxiv.org/abs/2111.00053)
+**e.g.RNN & units constrains: Using a big model to search the space of small model**       
+-[Tenachi et al 2023](https://arxiv.org/abs/2303.03192)
 
 
 ## Example Readmes
